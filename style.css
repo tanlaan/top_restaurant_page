@@ -62,7 +62,7 @@ body {
     background-color: #cccccc;
 }
 
-.selected, div#home.selected:hover {
+.selected, div.selected:hover {
     color: white;
     background-color: gray;
 }
