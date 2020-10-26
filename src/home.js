@@ -1,10 +1,6 @@
 export let home = () => {
     let location = document.getElementById('tab-data')
-    // Remove any other data
-    while(location.firstChild){
-        location.removeChild(location.lastChild)
-    }
-
+    
     let copy = document.createElement('div')
     copy.id = 'copy'
 
@@ -19,5 +15,4 @@ export let home = () => {
     copy.appendChild(copyParagraph)
 
     location.appendChild(copy)
-    alert('I ran!')
 }

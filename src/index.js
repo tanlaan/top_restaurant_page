@@ -1,4 +1,6 @@
 import {home} from './home.js'
+import {about} from './about.js'
+import {menu} from './menu.js'
 // Seems like a cop out. Have to find a better way to do this.
 // Oh duh. They told me to make a click handler... not directly 
 // attribute it to the click
@@ -60,11 +62,25 @@ let index = (() => {
 })()
 
 let clickHandler = (tabName) => {
+    let location = document.getElementById('tab-data')
+    // Remove any other data
+    while(location.firstChild){
+        location.removeChild(location.lastChild)
+    }
+    let tabs = document.getElementsByClassName('selected')[0]
+    tabs.setAttribute('class', 'unselected')
+
     if(tabName == 'home') {
+        let selectedTab = document.getElementById('home')
+        selectedTab.setAttribute('class', 'selected')
         home()
     } else if(tabName == 'about') {
+        let selectedTab = document.getElementById('about')
+        selectedTab.setAttribute('class', 'selected')
         about()
     } else if(tabName == 'menu') {
+        let selectedTab = document.getElementById('menu')
+        selectedTab.setAttribute('class', 'selected')
         menu()
     }
 }
