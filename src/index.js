@@ -1,4 +1,9 @@
 import {home} from './home.js'
+// Seems like a cop out. Have to find a better way to do this.
+// Oh duh. They told me to make a click handler... not directly 
+// attribute it to the click
+// window.home = home
+
 let index = (() => {
     let content = document.getElementById('content')
     // HERO
@@ -31,14 +36,17 @@ let index = (() => {
     tabHome.id = 'home'
     tabHome.textContent = 'Home'
     tabHome.setAttribute('class', 'selected')
+    tabHome.addEventListener('click', () => clickHandler('home'))
 
     let tabFood = document.createElement('div')
     tabFood.id = 'menu'
     tabFood.textContent = 'Menu'
+    tabFood.addEventListener('click', () => clickHandler('menu'))
 
     let tabAbout = document.createElement('div')
     tabAbout.id = 'about'
     tabAbout.textContent = 'About'
+    tabAbout.addEventListener('click', () => clickHandler('about'))
 
     tabMenu.appendChild(tabHome)
     tabMenu.appendChild(tabFood)
@@ -50,4 +58,14 @@ let index = (() => {
     content.appendChild(tabData)
     home()
 })()
+
+let clickHandler = (tabName) => {
+    if(tabName == 'home') {
+        home()
+    } else if(tabName == 'about') {
+        about()
+    } else if(tabName == 'menu') {
+        menu()
+    }
+}
 

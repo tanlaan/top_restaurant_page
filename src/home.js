@@ -4,7 +4,7 @@ export let home = () => {
     while(location.firstChild){
         location.removeChild(location.lastChild)
     }
-    
+
     let copy = document.createElement('div')
     copy.id = 'copy'
 
@@ -19,4 +19,5 @@ export let home = () => {
     copy.appendChild(copyParagraph)
 
     location.appendChild(copy)
+    alert('I ran!')
 }
