@@ -4,27 +4,7 @@ export let home = () => {
     while(location.firstChild){
         location.removeChild(location.lastChild)
     }
-    let hero = document.createElement('div')
-    hero.id = 'hero'
-
-    let heroText = document.createElement('div')
-    heroText.id = 'hero-text'
-
-    let title = document.createElement('h1')
-    title.innerHTML = '3 &frac14; Star Restaurant'
-    heroText.appendChild(title)
-
-    let subtitle = document.createElement('h2')
-    subtitle.textContent = 'Where flavor meets tongue'
-    heroText.appendChild(subtitle)
-
-    let image = document.createElement('img')
-    image.src = 'chef-picture.jpg'
-    hero.appendChild(image)
-    hero.appendChild(heroText)
-
-    location.appendChild(hero)
-
+    
     let copy = document.createElement('div')
     copy.id = 'copy'
 
