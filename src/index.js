@@ -54,10 +54,12 @@ let index = (() => {
     tabMenu.appendChild(tabFood)
     tabMenu.appendChild(tabAbout)
     content.appendChild(tabMenu)
-
+    let tabContainer = document.createElement('div')
+    tabContainer.id = 'tab-container'
     let tabData = document.createElement('div')
     tabData.id = 'tab-data'
-    content.appendChild(tabData)
+    tabContainer.appendChild(tabData)
+    content.appendChild(tabContainer)
     home()
 })()
 
