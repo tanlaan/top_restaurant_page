@@ -1,6 +1,7 @@
 import {home} from './home.js'
 import {about} from './about.js'
 import {menu} from './menu.js'
+import './style.css'
 // Seems like a cop out. Have to find a better way to do this.
 // Oh duh. They told me to make a click handler... not directly 
 // attribute it to the click
