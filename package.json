@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/tanlaan/top_restaurant_page#readme",
   "devDependencies": {
+    "@babel/core": "^7.12.7",
+    "@babel/preset-env": "^7.12.7",
+    "babel-loader": "^8.2.1",
     "css-loader": "^5.0.1",
     "style-loader": "^2.0.0",
     "webpack": "^5.2.0",
